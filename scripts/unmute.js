@@ -1,7 +1,6 @@
-const configs = require("../configs.json")
 
 module.exports = async (client, msg) => {
-    if(msg.content === configs.prefix+"unmute all" && msg.member.permissions.has('MUTE_MEMBERS')) {
+    if(msg.content === process.env.PREFIX+"unmute all" && msg.member.permissions.has('MUTE_MEMBERS')) {
         
         //Canal de voz que vai ser desmutado
         const voiceChannel = msg.member.voice.channel;

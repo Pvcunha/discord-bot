@@ -4,9 +4,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-const configs = require("./configs.json");
-
-const commands = require("./route/route")(configs.prefix);
+const commands = require("./route/route")(process.env.PREFIX);
 
 console.log(commands);
 
@@ -23,5 +21,5 @@ client.on('message', msg => {
     }
 });
 
-client.login(configs.token_teste);
+client.login(process.env.TOKEN);
 

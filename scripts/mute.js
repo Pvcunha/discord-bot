@@ -1,7 +1,6 @@
-const config = require("../configs.json")
 
 module.exports = async (client, msg) => {
-    if(msg.content === config.prefix+'mute all' && msg.member.permissions.has('MUTE_MEMBERS')) {
+    if(msg.content === process.env.PREFIX+'mute all' && msg.member.permissions.has('MUTE_MEMBERS')) {
         
         //Canal de voz que vai ser mutado
         const voiceChannel = msg.member.voice.channel;
